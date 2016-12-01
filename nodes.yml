@@ -2,32 +2,39 @@
 - name: "config"
   ip: "10.10.10.200"
   box: "local/trusty"
-
-- name: "maas"
-  ip: "10.10.10.199"
-  box: "local/xenial"
+  bootstrap: "config.sh"
 
 - name: "control01"
   ip: "10.10.10.201"
   box: "local/trusty"
+  bootstrap: "minion.sh"
 
 - name: "control02"
   ip: "10.10.10.202"
   box: "local/trusty"
+  bootstrap: "minion.sh"
 
 - name: "control03"
   ip: "10.10.10.203"
   box: "local/trusty"
+  bootstrap: "minion.sh"
 
 - name: "compute01"
   ip: "10.10.10.204"
   box: "local/trusty"
+  bootstrap: "minion.sh"
 
 - name: "compute02"
   ip: "10.10.10.205"
   box: "local/trusty"
+  bootstrap: "minion.sh"
 
-- name: "proxy"
-  ip: "10.10.10.206"
-  box: "local/trusty"
+#- name: "proxy"
+#  ip: "10.10.10.206"
+#  box: "local/trusty"
+#  bootstrap: "minion.sh"
 
+#- name: "maas"
+#  ip: "10.10.10.199"
+#  box: "local/xenial"
+#  bootstrap: "maas.sh"
